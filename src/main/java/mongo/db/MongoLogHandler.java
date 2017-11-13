@@ -252,7 +252,11 @@ public class MongoLogHandler {
                 + "for (var i in values) {"
                 + "count += values[i]; }"
                 + "return count; }";
-        collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
+        try {
+
+            collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
+        }
+        catch (MongoCommandException e) {}
         return database.getCollection(collectionName).find().sort(descending("value"));
     }
     public FindIterable<Document> findUrlsDuration() {
