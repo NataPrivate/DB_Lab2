@@ -1,4 +1,4 @@
-package java.mongo.db;
+package test.mongo.db;
 
 import com.mongodb.*;
 import com.mongodb.client.*;
