@@ -1,4 +1,4 @@
-package mongo.db;
+package java.mongo.db;
 
 import com.mongodb.*;
 import com.mongodb.client.*;
@@ -8,6 +8,7 @@ import org.junit.*;
 import java.security.InvalidParameterException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import mongo.db.MongoLogHandler;
 import static org.junit.Assert.*;
 import static org.assertj.core.api.Assertions.*;
 
@@ -112,7 +113,8 @@ public class MongoLogHandlerTest {
     public void findUrlsCount() throws Exception {
         List<Document> expectedDocs = getExpectedDocsForUrlsCount();
         List<Document> actualDocs = new ArrayList<>();
-        for (Document document : handler.findUrlsCount()) actualDocs.add(document);
+        for (Document document : handler.findUrlsCount())
+            actualDocs.add(document);
         assertEquals(expectedDocs, actualDocs);
     }
     private List<Document> getExpectedDocsForUrlsCount() {
@@ -140,7 +142,9 @@ public class MongoLogHandlerTest {
     public void findUrlsDuration() throws Exception {
         List<Document> expectedDocs = getExpectedDocsForUrlsDuration();
         List<Document> actualDocs = new ArrayList<>();
-        for (Document document : handler.findUrlsDuration()) actualDocs.add(document);
+        Iterator<Document> iterator = handler.findUrlsDuration().iterator();
+        for (Document document : handler.findUrlsDuration())
+            actualDocs.add(document);
         assertEquals(expectedDocs, actualDocs);
     }
     private List<Document> getExpectedDocsForUrlsDuration() {
@@ -164,12 +168,12 @@ public class MongoLogHandlerTest {
         urlDuration.clear();
         return docs;
     }
-
     @Test
     public void findIdsDurationCount() throws Exception {
         List<Document> expectedDocs = getExpectedDocsForIdsDurationCount();
         List<Document> actualDocs = new ArrayList<>();
-        for (Document document : handler.findIdsDurationCount()) actualDocs.add(document);
+        for (Document document : handler.findIdsDurationCount())
+            actualDocs.add(document);
         assertEquals(expectedDocs, actualDocs);
     }
     private List<Document> getExpectedDocsForIdsDurationCount() {
@@ -213,14 +217,14 @@ public class MongoLogHandlerTest {
         idsDurationCount.clear();
         return docs;
     }
-
     @Test
     public void findUrlsCountByTime() throws Exception {
         String dateTime1 = "2017-10-23T10:45:18";
         String dateTime2 = "2017-10-31T00:00:00";
         List<Document> expectedDocs = getExpectedDocsForUrlsCountByTime();
         List<Document> actualDocs = new ArrayList<>();
-        for (Document document : handler.findUrlsCountByTime(dateTime1, dateTime2)) actualDocs.add(document);
+        for (Document document : handler.findUrlsCountByTime(dateTime1, dateTime2))
+            actualDocs.add(document);
         assertEquals(expectedDocs, actualDocs);
     }
     private List<Document> getExpectedDocsForUrlsCountByTime() {
