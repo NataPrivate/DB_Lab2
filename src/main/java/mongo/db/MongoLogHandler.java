@@ -170,14 +170,12 @@ public class MongoLogHandler {
         return datetimeMatcher.matches();
     }
     private boolean isDuration(String value) {
-        int integerDuration = 0;
-        float floatDuration = 0;
         try {
-            integerDuration = Integer.parseInt(value);
+            Integer.parseInt(value);
         }
         catch (NumberFormatException e) {
             try {
-                floatDuration = Float.parseFloat(value);
+                Float.parseFloat(value);
             }
             catch (NumberFormatException e1) {
                 return  false;
@@ -252,11 +250,7 @@ public class MongoLogHandler {
                 + "for (var i in values) {"
                 + "count += values[i]; }"
                 + "return count; }";
-        com.mongodb.MapReduceCommand cmd = new com.mongodb.MapReduceCommand(
-                new Mongo("localhost", 27017).getDB("serverlogs").getCollection("logs"),
-                map, reduce, collectionName, MapReduceCommand.OutputType.REDUCE, null);
-        new Mongo("localhost", 27017).getDB("serverlogs").getCollection("logs").mapReduce(cmd);
-        //collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
+        collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
         return database.getCollection(collectionName).find().sort(descending("value"));
     }
     public FindIterable<Document> findUrlsDuration() {
