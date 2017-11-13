@@ -252,11 +252,11 @@ public class MongoLogHandler {
                 + "for (var i in values) {"
                 + "count += values[i]; }"
                 + "return count; }";
-        try {
-
-            collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
-        }
-        catch (MongoCommandException e) {}
+        com.mongodb.MapReduceCommand cmd = new com.mongodb.MapReduceCommand(
+                new Mongo("localhost", 27017).getDB("serverlogs").getCollection("logs"),
+                map, reduce, collectionName, MapReduceCommand.OutputType.REDUCE, null);
+        new Mongo("localhost", 27017).getDB("serverlogs").getCollection("logs").mapReduce(cmd);
+        //collection.mapReduce(map, reduce).collectionName(collectionName).toCollection();
         return database.getCollection(collectionName).find().sort(descending("value"));
     }
     public FindIterable<Document> findUrlsDuration() {
