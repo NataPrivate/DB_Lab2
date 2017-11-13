@@ -1,0 +1,68 @@
+group 'DB'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets.test.java.srcDirs = ["src/test"]
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.mongodb:mongo-java-driver:3.4.1'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+}
+
+jar {
+    manifest{
+        attributes ('Main-Class' : 'MongoLogHandler')
+    }
+}
+
+task codeCoverageReport(type: JacocoReport) {
+    def coverageSourceDirs = [ 'src/main/java', ]
+    executionData = fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+    classDirectories = fileTree(dir: "${project.buildDir}/classes/java/main")
+    sourceDirectories = files(coverageSourceDirs)
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
+        html.enabled false
+        csv.enabled false
+    }
+}
+
+codeCoverageReport.dependsOn {
+    subprojects*.task(test)
+}
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+    reportsDir = file("$buildDir/JacocoReportDir")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled true
+    }
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: '**/*Main*')
+        })
+    }
+}
+
+check.dependsOn jacocoTestReport
