@@ -1,4 +1,4 @@
-# DB_Lab2
+# DB Lab2
 MongoDB for server's logs
 
 Includes:
