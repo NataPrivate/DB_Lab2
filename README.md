@@ -1,5 +1,5 @@
 # DB Lab2
-MongoDB for server's logs
+##MongoDB for server's logs
 
 Includes:
 - convertation from csv to json
