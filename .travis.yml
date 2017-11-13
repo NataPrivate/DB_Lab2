@@ -24,7 +24,7 @@ before_script:
     - unzip gradle-2.14-bin.zip
     - export GRADLE_HOME=$PWD/gradle-2.14
     - export PATH=$GRADLE_HOME/bin:$PATH
-    - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["userAdmin"]});'
+    - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["dbOwner"]});'
 
 script:
 - ./gradlew assemble
