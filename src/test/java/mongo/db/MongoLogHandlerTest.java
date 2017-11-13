@@ -142,7 +142,6 @@ public class MongoLogHandlerTest {
     public void findUrlsDuration() throws Exception {
         List<Document> expectedDocs = getExpectedDocsForUrlsDuration();
         List<Document> actualDocs = new ArrayList<>();
-        Iterator<Document> iterator = handler.findUrlsDuration().iterator();
         for (Document document : handler.findUrlsDuration())
             actualDocs.add(document);
         assertEquals(expectedDocs, actualDocs);
