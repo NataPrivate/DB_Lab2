@@ -1,14 +1,14 @@
 package test.mongo.db;
 
+import mongo.db.MongoLogHandler;
 import com.mongodb.*;
 import com.mongodb.client.*;
 import static com.mongodb.client.model.Filters.*;
 import org.bson.Document;
-import org.junit.*;
 import java.security.InvalidParameterException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import mongo.db.MongoLogHandler;
+import org.junit.*;
 import static org.junit.Assert.*;
 import static org.assertj.core.api.Assertions.*;
 
