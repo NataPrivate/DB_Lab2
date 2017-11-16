@@ -126,7 +126,8 @@ public class MongoLogHandlerTest {
     //endregion
     private long getActualCount(FindIterable<Document> docs) {
         long count = 0;
-        for (Object doc : docs)
+        Iterator iterator = docs.iterator();
+        while (iterator.hasNext() && iterator.next() != null)
             count++;
         return count;
     }

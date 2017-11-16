@@ -14,7 +14,7 @@ public class Main {
             while (true) {
                 System.out.println("Enter a csv log");
                 String csvLog = input.nextLine();
-                if (csvLog.equals("exit"))
+                if ("exit".equals(csvLog))
                     break;
                 try {
                     mongo.insertLog(csvLog);
@@ -40,9 +40,9 @@ public class Main {
     private static void askFindQueries(MongoLogHandler mongo) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an url");
-        IpsFind(mongo, scanner.nextLine().trim());
+        ipsFind(mongo, scanner.nextLine().trim());
         System.out.println("Enter an ip address");
-        UrlsFind(mongo, scanner.nextLine().trim());
+        urlsFind(mongo, scanner.nextLine().trim());
         System.out.println("Enter two Dates in format yyyy-mm-ddThh:mm:ss");
         String input = scanner.nextLine().trim();
         if (input.contains(",")) {
@@ -52,10 +52,10 @@ public class Main {
         }
     }
 
-    private static void IpsFind(MongoLogHandler mongo, String url) {
+    private static void ipsFind(MongoLogHandler mongo, String url) {
         printDocuments(mongo.findIpsByUrl(url).iterator());
     }
-    private static void UrlsFind(MongoLogHandler mongo, String ip) {
+    private static void urlsFind(MongoLogHandler mongo, String ip) {
         printDocuments(mongo.findUrlsOfIp(ip).iterator());
     }
     private static void byTimeDateRangeFind(MongoLogHandler mongo, String dateTime1, String dateTime2) {

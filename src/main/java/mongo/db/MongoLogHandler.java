@@ -17,17 +17,17 @@ import java.util.regex.*;
  * 'logs' collection
  */
 public class MongoLogHandler {
+    private MongoClient client;
+    private MongoDatabase database;
+    private MongoCollection<Document> collection;
+    private Map<String, Object> documentContent;
+    private StringBuilder jsonLog;
     public MongoDatabase getDatabase() {
         return database;
     }
     public MongoCollection<Document> getCollection() {
         return collection;
     }
-    private MongoClient client;
-    private MongoDatabase database;
-    private MongoCollection<Document> collection;
-    private Map<String, Object> documentContent;
-    private StringBuilder jsonLog;
 
     public MongoLogHandler() throws com.mongodb.MongoSocketOpenException {
         client = new MongoClient("localhost", 27017);
@@ -166,7 +166,6 @@ public class MongoLogHandler {
     }
 
     private boolean isDateTime(String value) {
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
         Pattern datetimePattern = Pattern.
                 compile("^(200\\d|201[0-7])" +
                         "-(0?[1-9]|1[012])-(0?[1-9]|[12]\\d|3[01])" +
