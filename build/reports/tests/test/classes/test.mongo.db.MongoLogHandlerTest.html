@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.382s</div>
+<div class="counter">7.328s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,57 +82,57 @@
 </thead>
 <tr>
 <td class="success">findIdsDurationCount</td>
-<td>0.090s</td>
+<td>0.191s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findIpsByUrl</td>
-<td>0.054s</td>
+<td>0.092s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findUrlsCount</td>
-<td>0.086s</td>
+<td>0.171s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findUrlsCountByTime</td>
-<td>0.194s</td>
+<td>0.304s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findUrlsDuration</td>
-<td>0.087s</td>
+<td>0.141s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findUrlsInTime</td>
-<td>1.363s</td>
+<td>4.595s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findUrlsOfIp</td>
-<td>0.034s</td>
+<td>0.118s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">insertIncorrectLogs</td>
-<td>0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">insertLogs</td>
-<td>0.421s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">isInvalid</td>
 <td>0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">insertLogs</td>
+<td>1.636s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">isInvalid</td>
+<td>0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">isValid</td>
-<td>0.023s</td>
+<td>0.022s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -148,159 +148,159 @@ Document inserted successfully
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>лист. 16, 2017 12:26:12 PM com.mongodb.diagnostics.logging.JULLogger log
+<pre>лист. 16, 2017 5:00:27 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:12 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:27 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1348713}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1031156}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:4, serverValue:4}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:5, serverValue:5}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2040577}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:6, serverValue:6}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1279285}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:7, serverValue:7}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:27 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:9, serverValue:8}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1574504}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:8, serverValue:9}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1998317}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:10, serverValue:10}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:11, serverValue:11}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:27 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:2, serverValue:103}] to localhost:27017
+лист. 16, 2017 5:00:27 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:1, serverValue:102}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=6351753}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=5796330}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:3, serverValue:104}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:4, serverValue:105}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:12, serverValue:13}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:13, serverValue:12}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=656848}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=650811}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:14, serverValue:14}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:6, serverValue:106}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1453761}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:5, serverValue:107}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=5128614}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:7, serverValue:108}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:15, serverValue:15}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=789064}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:16, serverValue:16}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=876603}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:17, serverValue:17}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:18, serverValue:18}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:8, serverValue:109}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1057720}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:9, serverValue:110}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2553138}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:10, serverValue:111}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:11, serverValue:112}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:19, serverValue:19}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=613381}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:20, serverValue:20}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=943616}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:21, serverValue:21}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:13, serverValue:113}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=3095280}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:12, serverValue:114}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=992518}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:14, serverValue:115}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:22, serverValue:22}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:23, serverValue:23}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2049633}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=826494}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:24, serverValue:24}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:25, serverValue:25}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=794497}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1204424}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:26, serverValue:26}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:28, serverValue:28}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:27, serverValue:27}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1227969}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=696694}
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:29, serverValue:29}] to localhost:27017
-лист. 16, 2017 12:26:13 PM com.mongodb.diagnostics.logging.JULLogger log
-INFO: Opened connection [connectionId{localValue:30, serverValue:30}] to localhost:27017
-лист. 16, 2017 12:26:14 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:15, serverValue:116}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=3820350}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:16, serverValue:117}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=994933}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:17, serverValue:118}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:18, serverValue:119}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:14 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:14 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:20, serverValue:121}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:19, serverValue:120}] to localhost:27017
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=864529}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1283512}
+лист. 16, 2017 5:00:28 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:21, serverValue:122}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-лист. 16, 2017 12:26:14 PM com.mongodb.diagnostics.logging.JULLogger log
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:22, serverValue:123}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:25, serverValue:125}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=719636}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2757196}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:24, serverValue:124}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1084283}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:23, serverValue:126}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=2469824}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:26, serverValue:127}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, serverDescriptions=[ServerDescription{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:27, serverValue:128}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:28, serverValue:129}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=907393}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=1152504}
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:29, serverValue:130}] to localhost:27017
+лист. 16, 2017 5:00:29 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Opened connection [connectionId{localValue:30, serverValue:131}] to localhost:27017
+лист. 16, 2017 5:00:30 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:30 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:30 PM com.mongodb.diagnostics.logging.JULLogger log
+INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+лист. 16, 2017 5:00:30 PM com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
 </pre>
 </span>
@@ -313,7 +313,7 @@ INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requi
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.1</a> at 16 лист. 2017 12:26:14</p>
+<a href="http://www.gradle.org">Gradle 4.1</a> at 16 лист. 2017 17:00:31</p>
 </div>
 </div>
 </body>
