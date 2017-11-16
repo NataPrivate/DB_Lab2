@@ -23,17 +23,22 @@ public class MongoLogHandler {
     public MongoCollection<Document> getCollection() {
         return collection;
     }
+    private MongoClient client;
     private MongoDatabase database;
     private MongoCollection<Document> collection;
     private Map<String, Object> documentContent;
     private StringBuilder jsonLog;
 
     public MongoLogHandler() throws com.mongodb.MongoSocketOpenException {
-        MongoClient mongo = new MongoClient("localhost", 27017);
-        database = mongo.getDatabase("serverlogs");
+        client = new MongoClient("localhost", 27017);
+        database = client.getDatabase("serverlogs");
         collection = database.getCollection("logs");
         documentContent = new HashMap<>();
         jsonLog = new StringBuilder("{}");
+    }
+
+    public void close() {
+         client.close();
     }
 
     public void insertLog(String csvLog) throws InvalidParameterException {

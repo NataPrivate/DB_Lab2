@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        MongoLogHandler mongo = null;
         try {
-            MongoLogHandler mongo = new MongoLogHandler();
+            mongo = new MongoLogHandler();
             Scanner input = new Scanner(System.in);
             while (true) {
                 System.out.println("Enter a csv log");
@@ -29,6 +30,10 @@ public class Main {
         catch (com.mongodb.MongoSocketOpenException e) {
             System.out.println("Can not connect to db");
             System.exit(0);
+        }
+        finally {
+            if (mongo != null)
+                mongo.close();
         }
     }
 
