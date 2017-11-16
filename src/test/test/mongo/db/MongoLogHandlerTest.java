@@ -14,17 +14,28 @@ import static org.assertj.core.api.Assertions.*;
 
 
 public class MongoLogHandlerTest {
-    private MongoLogHandler handler;
-    private MongoDatabase testDatabase;
-    private MongoCollection<Document> collection;
-    private Map<String, String> incorrectLogs, correctLogs;
+    private MongoLogHandler handler = new MongoLogHandler();
+    private MongoDatabase testDatabase = new MongoClient("localhost", 27017).getDatabase("serverlogs");
+    private MongoCollection<Document> collection = testDatabase.getCollection("logs");
+    private static Map<String, String> incorrectLogs, correctLogs;
 
-    @Before
-    public void init() {
-        handler = new MongoLogHandler();
-        testDatabase = new MongoClient("localhost", 27017).getDatabase("serverlogs");
-        collection = testDatabase.getCollection("logs");
+    @BeforeClass
+    public static void init() {
+        MongoLogHandler handler = new MongoLogHandler();
+        handler.insertLog("43.13.111.66, 2017-10-31T21:33:06, 10, stackoverflow.com/questions/3778428/best-way-to-store-date-time-in-mongodb");
+        handler.insertLog("123.43.2.8, 2017-10-26T09:09:51, 2.1, www.tutorialspoint.com/mongodb/mongodb_query_document.htm");
+        handler.insertLog("123.23.13.2, 2017-10-15T11:50:08, 20, www.tutorialspoint.com/mongodb/mongodb_java.htm");
+        handler.insertLog("9.13.77.62, 2017-10-23T14:22:10, 4.3, http://www.stijit.com/web-tips/dry-kiss-solid-yagni");
+        handler.insertLog("123.23.13.2, 2017-10-23T15:41:18, 7, http://www.stijit.com/web-tips/dry-kiss-solid-yagni");
+        handler.insertLog("123.23.13.2, 2017-10-23T15:45:18, 4.7, www.tutorialspoint.com/mongodb/mongodb_java.htm");
+        handler.insertLog("223.23.13.2, 2017-11-03T10:00:28, 46, www.tutorialspoint.com/mongodb/mongodb_java.htm");
+        handler.insertLog("123.23.13.2, 2017-10-23T15:45:18, 4.7, www.tutorialspoint.com/mongodb/mongodb_java.htm");
+        handler.insertLog("123.23.13.2, 2017-10-23T15:45:18, 4.7, www.tutorialspoint.com/mongodb/mongodb_java.htm");
+        handler.close();
 
+        initLogs();
+    }
+    public static void initLogs() {
         incorrectLogs = new HashMap<>();
         incorrectLogs.put("", "not enough values");
         incorrectLogs.put("111.35.120.105, https://regex101.com, 50.9", "not enough values");
@@ -35,6 +46,13 @@ public class MongoLogHandlerTest {
         correctLogs.put("      111.35.120.105, https://regex101.com, 50.9  , 2017-3-2T21:22:7", "https://regex101.com");
         correctLogs.put("https://drive.google.com/drive/folders/0B4FNpNP6fq8LaE9iODAyY3pHZGM, 12, 2017-09-04T5:10:04, 02.66.01.00",
                 "https://drive.google.com/drive/folders/0B4FNpNP6fq8LaE9iODAyY3pHZGM");
+    }
+    @AfterClass
+    public static void finish() {
+        MongoLogHandler handler = new MongoLogHandler();
+        MongoCollection<Document> collection = handler.getCollection();
+        collection.drop();
+        handler.close();
     }
 
     @Test
@@ -67,7 +85,6 @@ public class MongoLogHandlerTest {
             }
         }
     }
-
     @Test
     public void insertLogs() throws Exception {
         long initCount = collection.count();
@@ -107,6 +124,12 @@ public class MongoLogHandlerTest {
         assertEquals(expectedCount, actualCount);
     }
     //endregion
+    private long getActualCount(FindIterable<Document> docs) {
+        long count = 0;
+        for (Object doc : docs)
+            count++;
+        return count;
+    }
 
     //region MapReduce
     @Test
@@ -115,7 +138,7 @@ public class MongoLogHandlerTest {
         List<Document> actualDocs = new ArrayList<>();
         for (Document document : handler.findUrlsCount())
             actualDocs.add(document);
-        //assertEquals(expectedDocs, actualDocs);
+        assertEquals(expectedDocs, actualDocs);
     }
     private List<Document> getExpectedDocsForUrlsCount() {
         List<Document> docs = new ArrayList<>();
@@ -154,7 +177,7 @@ public class MongoLogHandlerTest {
         docs.add(new Document(urlDuration));
         urlDuration.clear();
         urlDuration.put("_id", "http://www.stijit.com/web-tips/dry-kiss-solid-yagni");
-        urlDuration.put("value", 11.3);
+        urlDuration.put("value", 11.300000190734863);
         docs.add(new Document(urlDuration));
         urlDuration.clear();
         urlDuration.put("_id", "stackoverflow.com/questions/3778428/best-way-to-store-date-time-in-mongodb");
@@ -162,7 +185,7 @@ public class MongoLogHandlerTest {
         docs.add(new Document(urlDuration));
         urlDuration.clear();
         urlDuration.put("_id", "www.tutorialspoint.com/mongodb/mongodb_query_document.htm");
-        urlDuration.put("value", 2.1);
+        urlDuration.put("value", 2.0999999046325684);
         docs.add(new Document(urlDuration));
         urlDuration.clear();
         return docs;
@@ -187,7 +210,7 @@ public class MongoLogHandlerTest {
         durationCount.clear();
         idsDurationCount.clear();
         durationCount.put("count", 1.0);
-        durationCount.put("duration", 2.1);
+        durationCount.put("duration", 2.0999999046325684);
         idsDurationCount.put("_id", "123.43.2.8");
         idsDurationCount.put("value", new Document(durationCount));
         docs.add(new Document(idsDurationCount));
@@ -208,7 +231,7 @@ public class MongoLogHandlerTest {
         durationCount.clear();
         idsDurationCount.clear();
         durationCount.put("count", 1.0);
-        durationCount.put("duration", 4.3);
+        durationCount.put("duration", 4.300000190734863);
         idsDurationCount.put("_id", "9.13.77.62");
         idsDurationCount.put("value", new Document(durationCount));
         docs.add(new Document(idsDurationCount));
@@ -244,11 +267,4 @@ public class MongoLogHandlerTest {
         return docs;
     }
     //endregion
-
-    private long getActualCount(FindIterable<Document> docs) {
-        long count = 0;
-        for (Object doc : docs)
-            count++;
-        return count;
-    }
 }
